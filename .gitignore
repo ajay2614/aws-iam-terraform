@@ -1,0 +1,12 @@
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate.*
+
+# Local vars
+*.tfvars
+*.tfvars.json
+
+# OS
+.DS_Store

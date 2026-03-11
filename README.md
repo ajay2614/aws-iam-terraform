@@ -1,16 +1,14 @@
-# AWS IAM Terraform
+# AWS IAM Role (Simple)
 
-Start here. This repo creates IAM resources using Terraform (role/user/group) with simple on/off toggles.
+This project creates **one IAM role** and nothing else.
 
-## Files to Read
+## Files
 
-- `OVERVIEW.md`
-- `WORKFLOW.md`
-- `SYNTAX.md`
-- `TERRAFORM_COMMANDS_NOTES.md`
-- `ADVANCED_EXAMPLES.md`
+- `main.tf` — defines the IAM role
+- `variables.tf` — input variables
+- `outputs.tf` — output values
 
-## Quick Start
+## Run
 
 ```bash
 terraform init
@@ -18,6 +16,13 @@ terraform plan
 terraform apply
 ```
 
-## Notes
+## Inputs
 
-Terraform loads all `*.tf` files in the folder where you run the command. That folder is the "root" for Terraform.
+- `aws_region` (default: `us-east-1`)
+- `role_name` (default: `iam-terraform-role`)
+
+Override example:
+
+```bash
+terraform apply -var "role_name=my-simple-role"
+```
